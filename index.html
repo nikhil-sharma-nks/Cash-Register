@@ -24,47 +24,45 @@
       <header>
         <div class="main-title">Cash Register</div>
         <div class="description">
-          You give cash, we tell you how much change you'd get
+          You give cash, we tell you how much change you'd get.
         </div>
       </header>
-      <section class="input">
-        <label for="bill-amount">Bill Amount</label>
+      <section class="section-input">
+        <label for="bill-amount">Bill Amount:</label>
         <input
           id="bill-amount"
           type="text"
           placeholder="Enter the Bill Amount"
         />
         <button class="btn next-btn">Next</button>
-        <label for="cash-given">Cash Given</label>
+        <label for="cash-given">Cash Given:</label>
         <input id="cash-given" type="text" placeholder="Enter the Cash Given" />
         <button class="btn check-btn">Check</button>
       </section>
-      <section class="change-table">
+      <section class="change-table-container">
         <div class="table-heading">Retun Change</div>
-        <div class="table">
-          <table>
-            <tr>
-              <th>Notes</th>
-              <td class="notes">2000</td>
-              <td class="notes">500</td>
-              <td class="notes">100</td>
-              <td class="notes">20</td>
-              <td class="notes">10</td>
-              <td class="notes">5</td>
-              <td class="notes">1</td>
-            </tr>
-            <tr>
-              <th>No. Of Notes</th>
-              <td class="notes"></td>
-              <td class="notes"></td>
-              <td class="notes"></td>
-              <td class="notes"></td>
-              <td class="notes"></td>
-              <td class="notes"></td>
-              <td class="notes"></td>
-            </tr>
-          </table>
-        </div>
+        <table class="change-table">
+          <tr>
+            <th>Notes</th>
+            <td class="notes">2000</td>
+            <td class="notes">500</td>
+            <td class="notes">100</td>
+            <td class="notes">20</td>
+            <td class="notes">10</td>
+            <td class="notes">5</td>
+            <td class="notes">1</td>
+          </tr>
+          <tr>
+            <th>No. Of Notes</th>
+            <td class="notes"></td>
+            <td class="notes"></td>
+            <td class="notes"></td>
+            <td class="notes"></td>
+            <td class="notes"></td>
+            <td class="notes"></td>
+            <td class="notes"></td>
+          </tr>
+        </table>
       </section>
     </div>
     <footer class="main-footer">
