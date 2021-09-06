@@ -6,9 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monofett&family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <h1>Cash Register</h1>
+    <div class="container">
+      <header>
+        <div class="main-title">Cash Register</div>
+        <div class="description">
+          You give cash, we tell you how much change you'd get
+        </div>
+      </header>
+      <section class="input">
+        <label for="bill-amount">Bill Amount</label>
+        <input
+          id="bill-amount"
+          type="text"
+          placeholder="Enter the Bill Amount"
+        />
+        <button class="btn next-btn">Next</button>
+        <label for="cash-given">Cash Given</label>
+        <input id="cash-given" type="text" placeholder="Enter the Cash Given" />
+        <button class="btn check-btn">Check</button>
+      </section>
+      <section class="change-table">
+        <div class="table-heading">Retun Change</div>
+        <div class="table">
+          <table>
+            <tr>
+              <th>Notes</th>
+              <td class="notes">2000</td>
+              <td class="notes">500</td>
+              <td class="notes">100</td>
+              <td class="notes">20</td>
+              <td class="notes">10</td>
+              <td class="notes">5</td>
+              <td class="notes">1</td>
+            </tr>
+            <tr>
+              <th>No. Of Notes</th>
+              <td class="notes"></td>
+              <td class="notes"></td>
+              <td class="notes"></td>
+              <td class="notes"></td>
+              <td class="notes"></td>
+              <td class="notes"></td>
+              <td class="notes"></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p class="footer-text">Made with ❤ by Nikhil <br /></p>
+
+        <div class="social">
+          <a
+            href="https://www.linkedin.com/in/nikhil-sharma-nks/"
+            target="_blank"
+            ><i class="fab fa-linkedin fa-3x"></i
+          ></a>
+          <a href="https://github.com/nikhil-sharma-nks" target="_blank"
+            ><i class="fab fa-github fa-3x"></i
+          ></a>
+          <a href="https://twitter.com/wannabe_nikhil" target="_blank"
+            ><i class="fab fa-twitter fa-3x"></i
+          ></a>
+          <a href="https://www.facebook.com/nikhilshawarma/" target="_blank">
+            <i class="fab fa-facebook fa-3x"></i
+          ></a>
+          <a href="https://www.instagram.com/nikhil.shawarma/" target="_blank"
+            ><i class="fab fa-instagram fa-3x"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./app.js"></script>
 </html>
