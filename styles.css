@@ -17,20 +17,34 @@ input {
   padding: 10px;
   width: 25vw;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid #555;
+}
+
+.display-hidden {
+  display: none;
+}
+.display-visible {
+  display: block;
 }
 
 .btn {
   margin: 10px;
   padding: 10px 35px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
   /* border: 1px solid #555; */
   font-size: 1rem;
   background: var(--primary-color);
   color: white;
+}
+
+.clear-btn {
+  border: 1px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  display: none;
 }
 
 .container {
@@ -54,7 +68,9 @@ header .description {
   font-size: 1.3rem;
 }
 
-.section-input {
+.section-input,
+.bill-amount-input-section,
+.cash-input-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,6 +82,14 @@ header .description {
   color: var(--primary-color);
   padding: 10px;
   font-size: 1.3rem;
+}
+
+.bill-error-msg,
+.cash-error-msg {
+  margin-top: 10px;
+  font-weight: bolder;
+  color: red;
+  display: none;
 }
 
 .change-table-container {

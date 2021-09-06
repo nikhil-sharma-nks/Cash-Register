@@ -28,16 +28,33 @@
         </div>
       </header>
       <section class="section-input">
-        <label for="bill-amount">Bill Amount:</label>
-        <input
-          id="bill-amount"
-          type="text"
-          placeholder="Enter the Bill Amount"
-        />
-        <button class="btn next-btn">Next</button>
-        <label for="cash-given">Cash Given:</label>
-        <input id="cash-given" type="text" placeholder="Enter the Cash Given" />
-        <button class="btn check-btn">Check</button>
+        <div class="bill-amount-input-section">
+          <label for="bill-amount">Bill Amount:</label>
+          <input
+            id="bill-amount"
+            type="number"
+            placeholder="Enter the Bill Amount"
+          />
+          <button class="btn next-btn">Next</button>
+        </div>
+        <div class="bill-error-msg">
+          <p>ERROR: Enter A Positive Number</p>
+        </div>
+        <div class="cash-input-section">
+          <label for="cash-given">Cash Given:</label>
+          <input
+            id="cash-given"
+            type="number"
+            placeholder="Enter the Cash Given"
+          />
+          <div class="btn-section">
+            <button class="btn check-btn">Check</button>
+            <button class="btn clear-btn">Clear Input</button>
+          </div>
+          <div class="cash-error-msg">
+            <p>ERROR: Cash Given Should be More Than The Bill Amount</p>
+          </div>
+        </div>
       </section>
       <section class="change-table-container">
         <div class="table-heading">Retun Change</div>
@@ -54,13 +71,13 @@
           </tr>
           <tr>
             <th>No. Of Notes</th>
-            <td class="notes"></td>
-            <td class="notes"></td>
-            <td class="notes"></td>
-            <td class="notes"></td>
-            <td class="notes"></td>
-            <td class="notes"></td>
-            <td class="notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
           </tr>
         </table>
       </section>
