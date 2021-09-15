@@ -17,29 +17,34 @@ const notes = [2000, 500, 100, 20, 10, 5, 1];
 
 cashInputSection.style.display = "none";
 
-nextBtn.addEventListener("click", function nextBtnClick() {
-  if (billAmount.value > 0) {
-    amount = billAmount.value;
+function nextBtnClick() {
+  if (Number(billAmount.value) > 0) {
+    amount = Number(billAmount.value);
+
     billErrorMsg.style.display = "none";
     cashInputSection.style.display = "flex";
   } else {
     billErrorMsg.style.display = "block";
   }
-});
+}
+
+nextBtn.addEventListener("click", nextBtnClick);
 
 checkBtn.addEventListener("click", function checkBtnClick() {
-  cash = cashGiven.value;
+  amount = Number(billAmount.value);
+  cash = Number(cashGiven.value);
   clearBtn.style.display = "inline";
+  // console.log(typeof amount, typeof cash);
 
-  if (cashGiven.value > amount) {
-    cash = cashGiven.value;
+  if (cash > amount) {
+    cash = Number(cashGiven.value);
     let balance = cash - amount;
     cashErrorMsg.style.display = "none";
 
     for (let i = 0; i < notes.length; i++) {
-      console.log("balance ", balance);
+      // console.log("balance ", balance);
       const numberOfNotes = Math.trunc(balance / notes[i]);
-      console.log(balance / notes[i]);
+      // console.log(balance / notes[i]);
       if (numberOfNotes > 0) {
         noOfNotes[i].innerText = numberOfNotes;
         balance = balance % notes[i];
@@ -47,21 +52,33 @@ checkBtn.addEventListener("click", function checkBtnClick() {
         noOfNotes[i].innerText = "0";
       }
     }
+  } else if (cashGiven.value < 0) {
+    cashErrorMsg.style.display = "block";
+    cashErrorMsg.innerText = "ERROR: Please Enter A Postive Number";
+    clearTable();
   } else {
     cashErrorMsg.style.display = "block";
+    cashErrorMsg.innerText =
+      "ERROR: Cash Given Should be More Than The Bill Amount";
+    clearTable();
   }
 });
 
 clearBtn.addEventListener("click", function clearBtnClick() {
+  nextBtnClick();
   amount = 0;
   cash = 0;
   balance = 0;
   cashErrorMsg.style.display = "none";
   cashInputSection.style.display = "none";
 
-  for (let i = 0; i < noOfNotes.length; i++) {
-    noOfNotes[i].innerText = "";
-  }
+  clearTable();
   billAmount.value = "";
   cashGiven.value = "";
 });
+
+function clearTable() {
+  for (let i = 0; i < noOfNotes.length; i++) {
+    noOfNotes[i].innerText = "";
+  }
+}
